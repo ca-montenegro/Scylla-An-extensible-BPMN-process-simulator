@@ -1,0 +1,17 @@
+<bsim:globalConfiguration xmlns:bsim="http://bsim.hpi.uni-potsdam.de/scylla/simModel" targetNamespace="http://www.hpi.de" id="qbp_a9df0473-538b-46bd-a0c5-66a9d829e334">
+  <bsim:timetables>
+    <bsim:timetable id="QBP_DEFAULT_TIMETABLE" default="true" name="Default">
+      <bsim:timetableItem beginTime="09:00" endTime="17:00" from_="MONDAY" to="FRIDAY"/>
+    </bsim:timetable>
+    <bsim:timetable id="QBP_247_TIMETABLE" default="false" name="24/7">
+      <bsim:timetableItem beginTime="00:00" endTime="23:59" from_="MONDAY" to="SUNDAY"/>
+    </bsim:timetable>
+  </bsim:timetables>
+  <bsim:resourceData>
+    <bsim:dynamicResource id="QBP_DEFAULT_RESOURCE" name="Role 1" defaultQuantity="13" defaultCost="20" defaultTimetableId="QBP_DEFAULT_TIMETABLE" defaultTimeUnit="HOURS"/>
+    <bsim:dynamicResource id="qbp_7e5974ba-a0dd-4957-a5d4-396d0708e0cc" name="Role 2" defaultQuantity="8" defaultCost="20" defaultTimetableId="QBP_DEFAULT_TIMETABLE" defaultTimeUnit="HOURS"/>
+    <bsim:dynamicResource id="qbp_506c63ce-202e-49ba-8739-b4ec71e55aed" name="Role 3" defaultQuantity="4" defaultCost="20" defaultTimetableId="QBP_DEFAULT_TIMETABLE" defaultTimeUnit="HOURS"/>
+    <bsim:dynamicResource id="qbp_5b23b145-de94-4788-903d-fc5c7900c5ed" name="Role 4" defaultQuantity="3" defaultCost="20" defaultTimetableId="QBP_DEFAULT_TIMETABLE" defaultTimeUnit="HOURS"/>
+    <bsim:dynamicResource id="qbp_ab8a1607-bb53-4313-85c1-ba1187c5dcc6" name="Role 5" defaultQuantity="2" defaultCost="20" defaultTimetableId="QBP_DEFAULT_TIMETABLE" defaultTimeUnit="HOURS"/>
+  </bsim:resourceData>
+</bsim:globalConfiguration>

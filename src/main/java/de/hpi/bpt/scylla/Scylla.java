@@ -21,9 +21,9 @@ public class Scylla {
          * Simulation scenarios to test plug-ins.
          */
 
-        String folder = "samples" + FILEDELIM;
+        String folder = args[0]+ FILEDELIM;
 //      String resFilename = folder + "EmptyGC.xml";
-    	String resFilename = folder + "adminProcess_global.xml";
+    	String resFilename = folder + args[1];
 //        String resFilename = folder + "retailer_global.xml";
 //        String resFilename = folder + "p0_globalconf.xml";
 
@@ -62,8 +62,8 @@ public class Scylla {
 //      String[] bpmnFilename = new String[] { folder + "p8_normalbpmn_with_dataobject.bpmn"};
 //      String[] simFilenames = new String[] { folder + "p8_normalbpmn_with_dataobject_sim.xml"};
 
-        String[] bpmnFilename = new String[] { folder + "adminProcess_batch_parallel.bpmn"};
-        String[] simFilenames = new String[] { folder + "adminProcess_batch_sim.xml"};
+        String[] bpmnFilename = new String[] { folder + args[2]};
+        String[] simFilenames = new String[] { folder + args[3]};
 
 //        String[] bpmnFilename = new String[] { folder + "retailer_batch_bpmn.bpmn"};
 //        String[] simFilenames = new String[] { folder + "retailer_batch_sim.xml"};

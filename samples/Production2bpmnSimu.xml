@@ -1,0 +1,94 @@
+<bsim:definitions xmlns:bsim="http://bsim.hpi.uni-potsdam.de/scylla/simModel" targetNamespace="http://www.hpi.de">
+  <bsim:simulationConfiguration id="qbp_475738b4-6e89-4461-9b72-c20acd6fea4a" processRef="process_1" processInstances="225" startDateTime="2017-08-14T08:00:00.000Z">
+    <bsim:task id="node_de719f8c-a352-4ae0-8596-56ef2236a7d4" name="qbp_de41a234-8251-4388-a38f-e81a29853b00">
+      <bsim:duration timeUnit="SECONDS">
+        <bsim:exponentialDistribution>
+          <bsim:mean>35487.5</bsim:mean>
+        </bsim:exponentialDistribution>
+      </bsim:duration>
+      <bsim:resources>
+        <bsim:resource id="qbp_ab8a1607-bb53-4313-85c1-ba1187c5dcc6" amount="1"/>
+      </bsim:resources>
+    </bsim:task>
+    <bsim:task id="node_f3455b78-e619-4e25-8a88-a68b520f14ff" name="qbp_bcb504b8-727c-4cef-9d5c-7fa52923b921">
+      <bsim:duration timeUnit="SECONDS">
+        <bsim:exponentialDistribution>
+          <bsim:mean>0</bsim:mean>
+        </bsim:exponentialDistribution>
+      </bsim:duration>
+      <bsim:resources>
+        <bsim:resource id="QBP_DEFAULT_RESOURCE" amount="1"/>
+      </bsim:resources>
+    </bsim:task>
+    <bsim:task id="node_e0f85d0b-e296-474b-89f6-7e61fea9f89c" name="qbp_df164e3e-6dd2-49a4-ac90-802e4c9acf37">
+      <bsim:duration timeUnit="SECONDS">
+        <bsim:exponentialDistribution>
+          <bsim:mean>10219.6</bsim:mean>
+        </bsim:exponentialDistribution>
+      </bsim:duration>
+      <bsim:resources>
+        <bsim:resource id="qbp_506c63ce-202e-49ba-8739-b4ec71e55aed" amount="1"/>
+      </bsim:resources>
+    </bsim:task>
+    <bsim:task id="node_ea11f71a-e1bd-4264-a518-32acc74dccde" name="qbp_6a70d50d-ef32-477a-8a3b-b77bd82005e5">
+      <bsim:duration timeUnit="SECONDS">
+        <bsim:exponentialDistribution>
+          <bsim:mean>10240.4</bsim:mean>
+        </bsim:exponentialDistribution>
+      </bsim:duration>
+      <bsim:resources>
+        <bsim:resource id="qbp_7e5974ba-a0dd-4957-a5d4-396d0708e0cc" amount="1"/>
+      </bsim:resources>
+    </bsim:task>
+    <bsim:task id="node_248aaff5-bc7e-4e6c-adf4-efc454704dd4" name="qbp_b0db5ee8-3eee-4571-8dcf-9969c1054ec5">
+      <bsim:duration timeUnit="SECONDS">
+        <bsim:exponentialDistribution>
+          <bsim:mean>0</bsim:mean>
+        </bsim:exponentialDistribution>
+      </bsim:duration>
+      <bsim:resources>
+        <bsim:resource id="QBP_DEFAULT_RESOURCE" amount="1"/>
+      </bsim:resources>
+    </bsim:task>
+    <bsim:task id="node_5876c6f2-8f41-472e-a862-c107e5212937" name="qbp_7d7cbd70-264d-4a3d-a7ee-5a560a665fb4">
+      <bsim:duration timeUnit="SECONDS">
+        <bsim:exponentialDistribution>
+          <bsim:mean>36313.3</bsim:mean>
+        </bsim:exponentialDistribution>
+      </bsim:duration>
+      <bsim:resources>
+        <bsim:resource id="qbp_ab8a1607-bb53-4313-85c1-ba1187c5dcc6" amount="1"/>
+      </bsim:resources>
+    </bsim:task>
+    <bsim:task id="node_f490092e-8d58-430a-a6ec-33fc54f6de3b" name="qbp_78b4ab1e-d23a-4de4-aed1-ef04c4ca7714">
+      <bsim:duration timeUnit="SECONDS">
+        <bsim:erlangDistribution>
+          <bsim:order>60416553.6</bsim:order>
+          <bsim:mean>4794.1</bsim:mean>
+        </bsim:erlangDistribution>
+      </bsim:duration>
+      <bsim:resources>
+        <bsim:resource id="qbp_ab8a1607-bb53-4313-85c1-ba1187c5dcc6" amount="1"/>
+      </bsim:resources>
+    </bsim:task>
+    <bsim:task id="node_420fafb1-4910-4e31-9279-bd9f885d0f8a" name="qbp_3062317b-cf29-4231-934c-48ce98defce8">
+      <bsim:duration timeUnit="SECONDS">
+        <bsim:triangularDistribution>
+          <bsim:lower>0.0</bsim:lower>
+          <bsim:upper>3600.0</bsim:upper>
+          <bsim:peak>3600.0</bsim:peak>
+        </bsim:triangularDistribution>
+      </bsim:duration>
+      <bsim:resources>
+        <bsim:resource id="qbp_5b23b145-de94-4788-903d-fc5c7900c5ed" amount="1"/>
+      </bsim:resources>
+    </bsim:task>
+    <bsim:startEvent id="StartEvent_1">
+      <bsim:arrivalRate timeUnit="SECONDS">
+        <bsim:exponentialDistribution>
+          <bsim:mean>19232.7</bsim:mean>
+        </bsim:exponentialDistribution>
+      </bsim:arrivalRate>
+    </bsim:startEvent>
+  </bsim:simulationConfiguration>
+</bsim:definitions>

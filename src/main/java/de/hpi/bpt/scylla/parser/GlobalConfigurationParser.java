@@ -2,6 +2,7 @@ package de.hpi.bpt.scylla.parser;
 
 import java.time.DayOfWeek;
 import java.time.LocalTime;
+import java.time.OffsetTime;
 import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -180,10 +181,14 @@ public class GlobalConfigurationParser extends Parser<GlobalConfiguration> {
                         List<TimetableItem> items = new ArrayList<TimetableItem>();
                         List<Element> tItemElements = tElement.getChildren("timetableItem", bsimNamespace);
                         for (Element tItemElement : tItemElements) {
-                            DayOfWeek weekdayFrom = DayOfWeek.valueOf(tItemElement.getAttributeValue("from"));
+                            DayOfWeek weekdayFrom = DayOfWeek.valueOf(tItemElement.getAttributeValue("from_"));
                             DayOfWeek weekdayTo = DayOfWeek.valueOf(tItemElement.getAttributeValue("to"));
-                            LocalTime beginTime = LocalTime.parse(tItemElement.getAttributeValue("beginTime"));
-                            LocalTime endTime = LocalTime.parse(tItemElement.getAttributeValue("endTime"));
+                            //LocalTime beginTime = LocalTime.parse(tItemElement.getAttributeValue("beginTime"));
+                            OffsetTime beginTimeOffSet = OffsetTime.parse(tItemElement.getAttributeValue("beginTime"));
+                            LocalTime beginTime = beginTimeOffSet.toLocalTime();
+                            //LocalTime endTime = LocalTime.parse(tItemElement.getAttributeValue("endTime"));
+                            OffsetTime endTimeOffSet = OffsetTime.parse(tItemElement.getAttributeValue("endTime"));
+                            LocalTime endTime = endTimeOffSet.toLocalTime();
                             // TODO check for overlapping timetable items and handle them
                             if (DateTimeUtils.compareWeekdayTime(weekdayFrom, beginTime, weekdayTo, endTime) != 0) {
                                 if (weekdayFrom.compareTo(weekdayTo) > 0) { // e.g. FRIDAY to MONDAY

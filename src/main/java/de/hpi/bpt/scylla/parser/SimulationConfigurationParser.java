@@ -349,7 +349,8 @@ public class SimulationConfigurationParser extends Parser<SimulationConfiguratio
         else if (element.getChild("erlangDistribution", simNamespace) != null) {
             Element el = element.getChild("erlangDistribution", simNamespace);
             try {
-                long order = Long.valueOf(el.getChildText("order", simNamespace));
+            	double d = Double.valueOf(el.getChildText("order", simNamespace));
+                long order = (long)d;
                 double mean = Double.valueOf(el.getChildText("mean", simNamespace));
                 distribution = new ErlangDistribution(order, mean);
             }
