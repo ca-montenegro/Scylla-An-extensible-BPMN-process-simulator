@@ -1,4 +1,6 @@
-# Scylla - An extensible BPMN process simulator
+# Scylla - An extensible BPMN process simulator. Modified version for PhD project at University of Los Andes, Colombia
+
+## The original code can be find in this [repo](https://github.com/bptlab/scylla) property of Business Process Technology Group Hasso-Plattner-Institut für Digital Engineering gGmbH. Potsdam, Germany.
 
 Scylla is an extensible BPMN process simulator which relies on the building blocks of discrete event simulation.  The process simulator offers an UI where BPMN models can be extended with simulation-specific information (e.g., inter-arrival time of instances, task duration). Resources are centrally specified in an extra file, such that the simulator also allows multi-process simulation (a simulation with several process models using the same resources).
 
